@@ -23,7 +23,7 @@ article {
     }
 
     &.margin-slim {
-        padding: 0.5in;
+        padding: 0.5in 0.25in;
 
         header {
             margin: -0.5in -0.5in 0 -0.5in;
@@ -79,12 +79,12 @@ article {
         }
 
         small {
-            line-height: 0;
             font-size: 0.75rem;
         }
 
         a:link {
             text-decoration: none;
+            color: inherit;
             border-bottom: 1px dashed #FFF8;
         }
 
@@ -95,6 +95,7 @@ article {
         .flex-spread {
             display: flex;
             flex-direction: row;
+            height: 100%;
         }
 
         div.row {
@@ -115,7 +116,7 @@ article {
 
         nav.sidebar {
             background-color: $sidebar-color;
-            width: 25%;
+            width: 3.25in;
             height: 100%;
 
             padding: 0.25in 0.25in 0.25in 0.5in;
@@ -129,6 +130,7 @@ article {
                 margin-top: 0;
                 margin-bottom: 0.5rem;
                 font-family: "Comfortaa";
+                letter-spacing: -0.75px;
             }
 
             ul {
