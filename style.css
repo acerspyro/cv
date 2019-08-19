@@ -52,6 +52,19 @@ article.style-standard h2 {
   font-family: "Comfortaa";
   font-size: 1.5rem; }
 
+article.style-standard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Comfortaa";
+  letter-spacing: -0.75px; }
+
+article.style-standard h4 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-family: "Comfortaa";
+  letter-spacing: -0.75px;
+  font-size: 1rem; }
+
 article.style-standard section {
   position: relative;
   display: inline-block;
@@ -76,17 +89,25 @@ article.style-standard .flex-spread {
   flex-direction: row;
   height: 100%; }
 
-article.style-standard div.row {
-  width: 100%; }
+article.style-standard div.experience {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1.25in auto;
+  grid-row-gap: 0.75rem; }
 
-article.style-standard div.row span {
-  position: absolute; }
+article.style-standard div.experience div:not(:nth-child(2n)) {
+  font-size: 0.75rem;
+  color: #3465a4;
+  font-weight: bold;
+  width: 1.25in;
+  text-align: center;
+  border-right: 1px dashed #0008;
+  border-radius: 15px;
+  padding-top: 1rem; }
 
-article.style-standard div.row span:nth-child(1) {
-  left: 0; }
-
-article.style-standard div.row span:nth-child(2) {
-  left: 1.5in; }
+article.style-standard div.experience div:nth-child(2n) {
+  padding-left: 1rem;
+  padding-top: 0.5rem; }
 
 article.style-standard nav.sidebar {
   background-color: #3465a4;
@@ -97,12 +118,6 @@ article.style-standard nav.sidebar {
   color: #FFF;
   grid-column: 1;
   grid-row: 2; }
-
-article.style-standard nav.sidebar h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-family: "Comfortaa";
-  letter-spacing: -0.75px; }
 
 article.style-standard nav.sidebar ul {
   margin: 0.25rem 0 2rem 0;
