@@ -15,7 +15,8 @@ article {
 
 article.letter-format {
   width: 8.5in;
-  height: 11in; }
+  height: 11in;
+  box-sizing: border-box; }
 
 article.margin-slim {
   padding: 0.5in 0.25in; }
@@ -145,3 +146,16 @@ article.style-standard nav.sidebar div.gauge::before {
   width: var(--level);
   background-color: #FFF;
   border-radius: 0.25rem; }
+
+@page {
+  size: 8.5in 11in;
+  margin: 0; }
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0; }
+  article {
+    border: none;
+    box-shadow: none;
+    border-radius: none; } }

@@ -20,6 +20,7 @@ article {
     &.letter-format {
         width: 8.5in;
         height: 11in;
+        box-sizing: border-box;
     }
 
     &.margin-slim {
@@ -183,5 +184,23 @@ article {
                 }
             }
         }
+    }
+}
+
+@page {
+    size: 8.5in 11in;
+    margin: 0;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    article {
+        border: none;
+        box-shadow: none;
+        border-radius: none;
     }
 }
