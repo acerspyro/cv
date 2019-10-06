@@ -1,0 +1,14 @@
+{
+    "pages": [
+        "introduction",
+        "portfolio"
+    ],
+    "static": {
+        "personalInfo": {
+            "name": "Maxim",
+            "surname": "Therrien",
+            "nickname": "acerspyro",
+            "location": "Montréal, QC"
+        }
+    }
+}
