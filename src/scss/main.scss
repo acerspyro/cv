@@ -1,5 +1,7 @@
-$header-color: #2e3436;
-$sidebar-color: #3465a4;
+$color-primary: #3465a4;
+$color-secondary: #2e3436;
+
+@import "page";
 
 body {
     background: #EEE;
@@ -23,26 +25,13 @@ article {
         box-sizing: border-box;
     }
 
-    &.margin-slim {
-        padding: 0.5in 0.25in;
-
-        header {
-            margin: -0.5in -0.5in 0 -0.5in;
-            padding: 0 0.5in;
-        }
-
-        nav.sidebar {
-            margin: 0 0 0 -0.5in;
-        }
-    }
-
     &.style-standard {
         @import url('https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic&display=swap');
 
         font-family: "Didact Gothic";
 
         header {
-            background: $header-color;
+            background: $color-secondary;
             color: #FFF;
             overflow: auto;
 
@@ -124,7 +113,7 @@ article {
 
                 &:not(:nth-child(2n)) {
                     font-size: 0.75rem;
-                    color: $sidebar-color;
+                    color: $color-primary;
                     font-weight: bold;
                     width: 1.25in;
                     text-align: center;
@@ -141,12 +130,12 @@ article {
         }
 
         nav.sidebar {
-            background-color: $sidebar-color;
-            width: 3.25in;
+            background-color: $color-primary;
+            //width: 3.25in;
             height: 100%;
 
             padding: 0.25in 0.25in 0.25in 0.5in;
-            margin-right: 0.5in;
+            //margin-right: 0.5in;
             color: #FFF;
 
             grid-column: 1;
