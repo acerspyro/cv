@@ -4,8 +4,9 @@
   "description": "Maxim's Curriculum Vitae",
   "main": "build/index.html",
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar src/scss/main.scss -o assets/css",
-    "build-task:autoprefixer": "postcss assets/css/*.css --use autoprefixer -d assets/css",
+    "build-task:scss-compile": "node-sass-chokidar src/scss/main.scss -o build",
+    "build-task:autoprefixer": "postcss build/*.css --use autoprefixer -d build",
+    "build-task:pug": "node -e 'require(\"./pugbuild.js\").build.index()'",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
     "dev": "npm-run-all -p sass:*"
