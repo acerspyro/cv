@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Didact+Gothic&display=swap');
+
+$color-primary: #3465a4;
+$color-secondary: #2e3436;
+$font-primary: "Didact Gothic";
+$font-secondary: "Comfortaa";
+
+@mixin no-margin-as-first-child {
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin no-margin-as-last-child {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin no-margin-as-immediate-sibling($sibling) {
+    & + #{$sibling} {
+        margin-top: 0;
+    }
+
+}
+
+@mixin std-h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: $font-secondary;
+    font-size: 2.5rem;
+    @include no-margin-as-first-child();
+    @include no-margin-as-last-child();
+    @include no-margin-as-immediate-sibling("h2");
+}
+
+@mixin std-h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    @include no-margin-as-first-child();
+    @include no-margin-as-last-child();
+    @include no-margin-as-immediate-sibling("h3");
+}
+
+@mixin std-h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    font-family: $font-secondary;
+    font-size: 1.25rem;
+    @include no-margin-as-first-child();
+    @include no-margin-as-last-child();
+    @include no-margin-as-immediate-sibling("h4");
+}
+
+@mixin std-h4 {
+    margin-top: 0.25rem;
+    margin-bottom: 0rem;
+    font-family: $font-secondary;
+    font-size: 1rem;
+    @include no-margin-as-first-child();
+    @include no-margin-as-last-child();
+    @include no-margin-as-immediate-sibling("h5");
+}
+
+@mixin std-small {
+    display: inline-block; // Remove default font spacing
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1;
+    // color: #0008; // Commented out: Breaks sidebar
+}
+
+@mixin std-a-href {
+    text-decoration: underline;
+
+    transition: all 0.1s;
+
+    &:hover {
+        color: #FD6;
+    }
+
+    &:link {
+        color: inherit;
+        &:hover {
+            color: #FD6;
+        }
+    }
+}
+
+@mixin std-article {
+    border: 1px solid #0002;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-radius: 4px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+@mixin std-ul {
+    margin: 0;
+    padding-left: 1em;
+    list-style: none;
+
+    li {
+        position: relative;
+        &::before {
+            content: "•";
+            position: absolute;
+            display: block;
+            left: -0.75em;
+        }
+    }
+}
+
+@mixin std-hr-dash {
+    border-bottom: 2px solid 
+}
