@@ -3,6 +3,8 @@ $page-sidebar-std-width: 2.5fr;
 article {
 
     display: grid;
+    margin: 2rem;
+    line-height: 1.25rem;
 
     header {
         grid-column: 1 / 3;
