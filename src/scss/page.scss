@@ -75,30 +75,30 @@ article {
         }
 
         &.sidebar-left {
-            nav.sidebar {
-                margin-left: -$x-margin;
-                margin-bottom: -$y-margin;
-                padding: $x-margin;
-                padding-bottom: $y-margin;
-            }
-
             section {
                 padding-top: $x-margin;
                 padding-left: $x-margin;
+
+                &.sidebar {
+                    margin-left: -$x-margin;
+                    margin-bottom: -$y-margin;
+                    padding: $x-margin;
+                    padding-bottom: $y-margin;
+                }
             }
         }
 
         &.sidebar-right {
-            nav.sidebar {
-                margin-right: -$x-margin;
-                margin-bottom: -$y-margin;
-                padding: $x-margin;
-                padding-bottom: $y-margin;
-            }
-
             section {
                 padding-top: $x-margin;
                 padding-right: $x-margin;
+
+                &.sidebar {
+                    margin-right: -$x-margin;
+                    margin-bottom: -$y-margin;
+                    padding: $x-margin;
+                    padding-bottom: $y-margin;
+                }
             }
         }
 
